@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding"
+    android:paddingBottom="@dimen/padding"
+    android:paddingStart="@dimen/reduced_padding"
+    android:paddingEnd="@dimen/reduced_padding"
+    tools:context="com.example.marco.filoapplication.FirstLoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_surname"
+            android:hint="@string/date_og_birth"/>
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/date_of_birth"
+            android:layout_marginTop="@dimen/padding">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:checked="false"
+                android:layout_weight="1"
+                android:textSize="@dimen/text"
+                android:text="@string/male"/>
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:checked="false"
+                android:layout_weight="1"
+                android:textSize="@dimen/text"
+                android:text="@string/female"/>
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/smoker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/gender"
+            android:layout_marginTop="@dimen/padding">
+
+            <RadioButton
+                android:id="@+id/smoker_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:checked="false"
+                android:layout_weight="1"
+                android:textSize="@dimen/text"
+                android:text="@string/smoker"/>
+
+            <RadioButton
+                android:id="@+id/smoker_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:layout_weight="1"
+                android:textSize="@dimen/text"
+                android:text="@string/ex_smoker"/>
+
+            <RadioButton
+                android:id="@+id/smoker_ex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:checked="false"
+                android:layout_weight="1"
+                android:textSize="@dimen/text"
+                android:text="@string/non_smoker"/>
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/hypertension"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smoker"
+            android:layout_marginTop="@dimen/padding">
+
+            <TextView
+                android:id="@+id/hypertension_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/hypertension"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/hypertension_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@id/hypertension_text"
+                android:layout_toEndOf="@id/hypertension_text"
+                android:paddingLeft="@dimen/padding"
+                android:paddingStart="@dimen/padding">
+
+                <RadioButton
+                    android:id="@+id/hypertension_yes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text"
+                    android:text="@string/yes"/>
+
+                <RadioButton
+                    android:id="@+id/hypertension_no"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text"
+                    android:text="@string/no"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dyslipidemia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hypertension"
+            android:layout_marginTop="@dimen/padding">
+
+            <TextView
+                android:id="@+id/dyslipidemia_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/dyslipidemia"
+                android:textSize="@dimen/text"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/dyslipidemia_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@id/dyslipidemia_text"
+                android:layout_toEndOf="@id/dyslipidemia_text"
+                android:paddingLeft="@dimen/padding"
+                android:paddingStart="@dimen/padding">
+
+                <RadioButton
+                    android:id="@+id/dyslipidemia_yes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text"
+                    android:text="@string/yes"/>
+
+                <RadioButton
+                    android:id="@+id/dyslipidemia_no"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text"
+                    android:text="@string/no"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
