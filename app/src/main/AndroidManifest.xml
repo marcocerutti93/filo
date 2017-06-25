@@ -27,7 +27,9 @@
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/registration_activity_title" />
-        <activity android:name=".FirstLoginActivity"></activity>
+        <activity
+            android:name=".FirstLoginActivity"
+            android:label="@string/registration_activity_title"/>
     </application>
 
 </manifest>
